@@ -27,18 +27,22 @@ export const Banner = () => {
     const tick = () => {
         let i = loopNum % toRotate.length; //Calc current index
         let fullText = toRotate[i];
+        // Determine if text is being typed out or deleted
         let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1)
 
         setText(updatedText);
 
+        // Should be deleting faster than typing
         if (isDeleting) {
             setDelta(prevDelta => prevDelta / 2)
         }
 
+        // Check if text is fully typed out
         if (!isDeleting && updatedText === fullText){
             setIsDeleting(true);
             setDelta(period);
         }
+        //If text is fully deleted, go to next word and slight delay
         else if (isDeleting && updatedText === ''){
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
@@ -52,7 +56,7 @@ export const Banner = () => {
             <Row className="align-items-center">
                 <Col xs={12} md={6} xl={7}>
                     <span className="tagline">Welcome to my Portfolio</span>
-                    <h1>{"Hi I'm webencoded"}<span className="wrap">web developer</span></h1>
+                    <h1>{"Hi I'm Nicholas Yu "}<span className="wrap">{text}</span></h1>
                     <p>Lorem Ipsum</p>
                     <button onClick={() => console.log('connect')}>Let's Connect<ArrowRightCircle size={25} /></button>
                 </Col>
