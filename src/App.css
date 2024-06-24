@@ -300,6 +300,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
+.banner .banner-rotating-text {
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+  color:#fff;
+}
+
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
