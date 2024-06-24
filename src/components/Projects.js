@@ -35,7 +35,7 @@ export const Projects = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
       imgURL: projImg3,
       link: "#",
-    }
+    },
   ];
 
   return (
@@ -49,7 +49,11 @@ export const Projects = () => {
               industry. Lorem Ipsum has been the industry's standard dummy text.{" "}
             </p>
             <TabContainer id="project-tabs" defaultActiveKey="first">
-              <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+              <Nav
+                variant="pills"
+                className="nav-pills mb-5 justify-content-center align-items-center"
+                id="pills-tab"
+              >
                 <Nav.Item>
                   <Nav.Link eventKey="first">Tab One</Nav.Link>
                 </Nav.Item>
@@ -57,9 +61,7 @@ export const Projects = () => {
                   <Nav.Link eventKey="second">Tab Two</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="third">
-                    Tab Three
-                  </Nav.Link>
+                  <Nav.Link eventKey="third">Tab Three</Nav.Link>
                 </Nav.Item>
               </Nav>
               <TabContent>
