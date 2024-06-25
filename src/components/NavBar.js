@@ -68,19 +68,24 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
-                <img src={navIcon1} alt="" />
+              <a href="https://www.linkedin.com/in/nick-yu08/" target="_blank">
+                <img src={navIcon1} alt="LinkedIn Link" />
               </a>
-              <a href="#">
-                <img src={navIcon2} alt="" />
+              <a href="https://github.com/NicholasCharlesYu" target="_blank">
+                <img src={navIcon2} alt="GitHub Link" />
               </a>
-              <a href="#">
-                <img src={navIcon3} alt="" />
+              <a href="https://www.instagram.com/nick_yu10/" target="_blank">
+                <img src={navIcon3} alt="Instagram Link" />
               </a>
             </div>
-            <button className="vvd" onClick={() => console.log("connect")}>
+            <a
+              href="#connect"
+              className="navbtn"
+              onClick={() => onUpdateActivelink("connect")}
+              style={{ textDecoration: 'none', color: 'white' }}
+            >
               <span>Let's Connect!</span>
-            </button>
+            </a>
           </span>
         </Navbar.Collapse>
       </Container>
