@@ -1,91 +1,87 @@
+import { Col, Row, Container } from "react-bootstrap";
+import contactImg from "../assets/img/contact-img.svg";
 import { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.png";
 
 export const Contact = () => {
-  const formInitialDetails = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-  };
+  const [result, setResult] = useState("");
 
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Send");
-  const [status, setStatus] = useState({});
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
 
-  const onFormUpdate = (category, value) => {
-    setFormDetails({
-      ...formDetails,
-      [category]: value,
+    formData.append("access_key", "95603e7e-2feb-4d1e-894b-4fc862e7f316");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
     });
-  };
 
-  const handleSubmit = (e) => {
-    
-  }
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }};
 
   return (
-    <section className="contact" id="contact">
+    <section className="contact" id="connect">
       <Container>
-        <Row className="align-items-center">
-          <Col md={6}>
-            <img src={contactImg} alt="Contact Me" />
+        <Row>
+          <Col lg={6} className="contact-image-wrapper">
+            <img src={contactImg} alt="Contact Us" />
           </Col>
-          <Col md={6}>
+          <Col lg={6}>
             <h2>Get In Touch</h2>
-            <form onSubmit={handleSubmit}>
+            <form name="contact" onSubmit={onSubmit}>
               <Row>
+                <input type="hidden" name="form-name" value="contact" />
                 <Col sm={6} className="px-1">
                   <input
+                    required
                     type="text"
-                    value={formDetails.firstName}
+                    name="firstname"
                     placeholder="First Name"
-                    onChange={(e) => onFormUpdate("firstName", e.target.value)}
                   />
                 </Col>
                 <Col sm={6} className="px-1">
-                  <input
-                    type="text"
-                    value={formDetails.lastName}
-                    placeholder="Last Name"
-                    onChange={(e) => onFormUpdate("lastName", e.target.value)}
-                  />
+                  <input type="text" name="lastname" placeholder="Last Name" />
                 </Col>
                 <Col sm={6} className="px-1">
                   <input
+                    required
                     type="email"
-                    value={formDetails.email}
-                    placeholder="Email Address"
-                    onChange={(e) => onFormUpdate("email", e.target.value)}
+                    name="email"
+                    placeholder="Email Adress"
                   />
                 </Col>
                 <Col sm={6} className="px-1">
                   <input
+                    required
                     type="tel"
-                    value={formDetails.phone}
+                    name="phone"
                     placeholder="Phone Number"
-                    onChange={(e) => onFormUpdate("phone", e.target.value)}
                   />
                 </Col>
                 <Col>
                   <textarea
+                    required
                     row="6"
-                    value={formDetails.message}
                     placeholder="Message"
-                    onChange={(e) => onFormUpdate("message", e.target.value)}
+                    name="message"
                   ></textarea>
-                  <button type="submit"><span>{buttonText}</span></button>
+                  <button type="submit">
+                    <span>Submit</span>
+                  </button>
                 </Col>
-                {
-                    status.message &&
-                    <Col>
-                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                    </Col>
-                }
               </Row>
             </form>
+            <Col>
+            <span>{result}</span>
+          </Col>
           </Col>
         </Row>
       </Container>
