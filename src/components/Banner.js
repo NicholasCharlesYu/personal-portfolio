@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/header-img.png";
 import React from "react";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
   //State variables to manage text display looping animation
@@ -58,19 +60,33 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Welcome to my Portfolio</span>
-            <h1>{"Hi I'm Nicholas Yu,"}</h1>
-            <p className="banner-rotating-text">
-              {"A "} <span className="wrap">{text}</span>
-            </p>
-            <p>Lorem Ipsum</p>
-            <button onClick={() => console.log("connect")}>
-              Let's Connect
-              <ArrowRightCircle size={25} />
-            </button>
+          <Col xs={12} sm={12} md={6} xl={6}>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__fadeIn" : ""
+                  }
+                >
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>{"Hi I'm Nicholas Yu,"}</h1>
+                  <p className="banner-rotating-text">
+                    {"A "} <span className="wrap">{text}</span>
+                  </p>
+                  <p>Lorem Ipsum</p>
+                  <a
+                    href="#connect"
+                    className="navbtn"
+                  >
+                    <span>Let's Connect</span>
+                    <ArrowRightCircle size={25} />
+                  </a>
+                  
+                </div>
+              )}
+            </TrackVisibility>
           </Col>
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} sm={12} md={6} xl={6}>
             <img src={headerImg} alt="Header img" />
           </Col>
         </Row>

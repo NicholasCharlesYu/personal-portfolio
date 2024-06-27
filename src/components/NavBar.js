@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/img/logo.svg";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import linkedInIcon from "../assets/img/linkedIn-icon.svg";
+import gitHubIcon from "../assets/img/github-icon.svg";
+import instagramIcon from "../assets/img/instagram-icon.svg";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -69,13 +69,13 @@ export const NavBar = () => {
           <span className="navbar-text">
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/nick-yu08/" target="_blank">
-                <img src={navIcon1} alt="LinkedIn Link" />
+                <img src={linkedInIcon} alt="LinkedIn Link" />
               </a>
               <a href="https://github.com/NicholasCharlesYu" target="_blank">
-                <img src={navIcon2} alt="GitHub Link" />
+                <img src={gitHubIcon} alt="GitHub Link" />
               </a>
               <a href="https://www.instagram.com/nick_yu10/" target="_blank">
-                <img src={navIcon3} alt="Instagram Link" />
+                <img src={instagramIcon} alt="Instagram Link" />
               </a>
             </div>
             <a

@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import linkedInIcon from "../assets/img/linkedIn-icon.svg";
+import gitHubIcon from "../assets/img/github-icon.svg";
+import instagramIcon from "../assets/img/instagram-icon.svg";
 
 export const Footer = () => {
     return (
@@ -13,9 +13,9 @@ export const Footer = () => {
                    </Col>
                    <Col sm={12} md={6} className="text-center text-sm-end footer-social-wrapper">
                    <div className="social-icon">
-                            <a href="https://www.linkedin.com/in/nick-yu08/" target="_blank"><img src={navIcon1} alt="LinkedIn Link" /></a>
-                            <a href="https://github.com/NicholasCharlesYu" target="_blank"><img src={navIcon2} alt="GitHub Link" /></a>
-                            <a href="https://www.instagram.com/nick_yu10/" target="_blank"><img src={navIcon3} alt="Instagram Link" /></a>
+                            <a href="https://www.linkedin.com/in/nick-yu08/" target="_blank"><img src={linkedInIcon} alt="LinkedIn Link" /></a>
+                            <a href="https://github.com/NicholasCharlesYu" target="_blank"><img src={gitHubIcon} alt="GitHub Link" /></a>
+                            <a href="https://www.instagram.com/nick_yu10/" target="_blank"><img src={instagramIcon} alt="Instagram Link" /></a>
                         </div>
                         <p className="footer-copyright">Copyright 2024. All Rights Reserved.</p>
                    </Col>
