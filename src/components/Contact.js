@@ -1,5 +1,5 @@
 import { Col, Row, Container } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+import contactImg from "../assets/img/contact.png";
 import { useState } from "react";
 
 export const Contact = () => {
@@ -14,7 +14,7 @@ export const Contact = () => {
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const data = await response.json();
@@ -25,7 +25,8 @@ export const Contact = () => {
     } else {
       console.log("Error", data);
       setResult(data.message);
-    }};
+    }
+  };
 
   return (
     <section className="contact" id="connect">
@@ -80,8 +81,8 @@ export const Contact = () => {
               </Row>
             </form>
             <Col>
-            <span>{result}</span>
-          </Col>
+              <span>{result}</span>
+            </Col>
           </Col>
         </Row>
       </Container>

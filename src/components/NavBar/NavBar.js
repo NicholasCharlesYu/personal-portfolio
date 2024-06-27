@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import logo from "../assets/img/logo.svg";
-import linkedInIcon from "../assets/img/linkedIn-icon.svg";
-import gitHubIcon from "../assets/img/github-icon.svg";
-import instagramIcon from "../assets/img/instagram-icon.svg";
+import logo from "../../assets/img/logo.png";
+import linkedInIcon from "../../assets/img/linkedIn-icon.svg";
+import gitHubIcon from "../../assets/img/github-icon.svg";
+import instagramIcon from "../../assets/img/instagram-icon.svg";
+import "./NavBar.css";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -31,7 +32,7 @@ export const NavBar = () => {
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="/">
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" className="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
@@ -82,7 +83,7 @@ export const NavBar = () => {
               href="#connect"
               className="navbtn"
               onClick={() => onUpdateActivelink("connect")}
-              style={{ textDecoration: 'none', color: 'white' }}
+              style={{ textDecoration: "none", color: "white" }}
             >
               <span>Let's Connect!</span>
             </a>

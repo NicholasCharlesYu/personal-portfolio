@@ -10,7 +10,7 @@ export const Banner = () => {
   //State variables to manage text display looping animation
   const [loopNum, setLoopNum] = useState(0); // Tracks the current loop number
   const [isDeleting, setIsDeleting] = useState(false); //Indicates if the text is being deleted or "typed out"
-  const toRotate = ["Web Developer", "Web Designer", "UI/UX Des"]; // Array of strings to rotate through
+  const toRotate = ["FullStack Developer", "Computer Scientist", "Data Scientist", "Fisherman"]; // Array of strings to rotate through
   const [text, setText] = useState(""); //Current Text on display
   const [delta, setDelta] = useState(300 - Math.random() * 100); // Time interval for typing effect
   const period = 2000; // Period of time to wait before deleting text
@@ -73,7 +73,7 @@ export const Banner = () => {
                   <p className="banner-rotating-text">
                     {"A "} <span className="wrap">{text}</span>
                   </p>
-                  <p>Lorem Ipsum</p>
+                  <p>Bio</p>
                   <a
                     href="#connect"
                     className="navbtn"

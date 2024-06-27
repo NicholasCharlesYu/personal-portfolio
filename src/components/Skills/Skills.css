@@ -1,13 +1,66 @@
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 50px 0;
+  position: relative;
+  text-align: center;
+}
+.skill-bx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 64px;
+  padding: 60px 50px;
+  margin-top: -60px;
+  border: solid #F2EFE9;
+  text-align: center;
+}
+.skill h2 {
+	font-size: 55px;
+	font-weight: 700;
+}
+
+.skill h3 {
+	font-size: 35px;
+	font-weight: 500;
+	color: #BFB48F;
+	padding-top: 30px;
+}
+
+.skill p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+}
+.skill-icons {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.skill-slider .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+
 .sphere {
 	perspective: 980px;
 	background:
 		radial-gradient(40px at 30% 30%, rgba(243, 243, 243, .05) 0%, rgba(243, 243, 243, .05) 99%, transparent 100%),
 		radial-gradient(40px at 25% 20%, rgba(243, 243, 243, .5) 0, rgba(255, 255, 255, .2) 8%, transparent 40%, transparent 100%),
-		radial-gradient(100px at 25% 20%, rgba(255, 9, 79, 0.2) 0%, transparent 100%),
-		radial-gradient(100px at 80% 90%, rgba(153, 12, 76, 0.85) 0%, transparent 100%);
+		radial-gradient(100px at 25% 20%, #8789C0 0%, transparent 100%),
+		radial-gradient(100px at 80% 90%, #7209B7 0%, transparent 100%);
 	border-radius: 50%;
 	animation: hover 2s ease 0s infinite;
-    height: 100%;
+    height: auto;
+	width: 95%;
+}
+
+img{
+	height: auto;
+	width: 95%;
 }
 
 .sphere:after {
