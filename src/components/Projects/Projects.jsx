@@ -10,7 +10,7 @@ export const Projects = () => {
     {
       title: "Stock Trading Web App",
       description:
-        "Full-stack web application written in JavaScript and Java, utilizing MySQL for the database. Retrieves live stock market data using APIs, and includes user-specific portfolio to manage and track their investments effectively.",
+        "Full-stack web application written in JavaScript and Java, utilizing MySQL for the database. Retrieves live stock market data using APIs, and includes user-specific portfolio to manage and track their investments effectively. (Ask for demo & source code)",
       imgURL: stockAppImg,
       link: "#",
     },
