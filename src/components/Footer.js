@@ -15,9 +15,8 @@ export const Footer = () => {
                    <div className="social-icon">
                             <a href="https://www.linkedin.com/in/nick-yu08/" target="_blank"><img src={linkedInIcon} alt="LinkedIn Link" /></a>
                             <a href="https://github.com/NicholasCharlesYu" target="_blank"><img src={gitHubIcon} alt="GitHub Link" /></a>
-                            <a href="https://www.instagram.com/nick_yu10/" target="_blank"><img src={instagramIcon} alt="Instagram Link" /></a>
+                            <p className="footer-email">Gmail: ncyu@usc.edu <br />Copyright 2024. All Rights Reserved.</p>
                         </div>
-                        <p className="footer-copyright">Copyright 2024. All Rights Reserved.</p>
                    </Col>
                 </Row>
             </Container>

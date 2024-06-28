@@ -83,92 +83,7 @@ p.danger {
 }
 
 
-/************ Banner Css ************/
-.banner {
-  margin-top: 0;
-  padding: 180px 0 100px 0;
-  background: #353535 !important;
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.banner .tagline {
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 20px;
-  margin-bottom: 16px;
-  display: inline-block;
-}
-.banner h1 {
-  font-size: 65px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1;
-  margin-bottom: 20px;
-  display: block;
-}
-.banner p {
-  color: #B8B8B8;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  width: 96%;
-}
-
-.banner .navbtn {
-  color: #fff;
-  font-weight: 700;
-  font-size: 20px;
-  margin-top: 60px;
-  letter-spacing: 0.8px;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  margin-bottom: 25px;
-}
-.banner .navbtn svg {
-  font-size: 25px;
-  margin-left: 10px;
-  transition: 0.3s ease-in-out;
-  line-height: 1;
-}
-.banner .navbtn:hover svg {
-  margin-left: 25px;
-}
-
-.banner img {
-  animation: updown 3s linear infinite;
-  width: 95%;
-}
-.banner .animate__animated.animate__fadeIn {
-  --animate-duration: 2.5s;
-}
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
-}
-.txt-rotate > .wrap {
-  border-right: 0.08em solid #666;
-}
-
-.banner .banner-rotating-text {
-  font-size: 35px;
-  font-weight: 500;
-  color:#8789C0;
-}
-
-
-/************ Projects Css ************/
+/************ Contact Css ************/
 .contact {
   background: l#353535 !important;
   padding: 60px 0 200px 0;
@@ -303,8 +218,8 @@ p.danger {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
-.footer-copyright {
-  color: #909090;
+.footer-email {
+  color: #F2EFE9;
 }
 .footer-title {
   font-size: 30px;

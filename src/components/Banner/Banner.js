@@ -1,16 +1,24 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.png";
+import headerImg from "../../assets/img/header-img.png";
 import React from "react";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import Resume from "../../assets/img/Nicholas-Yu's-Resume.pdf";
+import { Button } from "react-bootstrap";
+import "./Banner.css";
 
 export const Banner = () => {
   //State variables to manage text display looping animation
   const [loopNum, setLoopNum] = useState(0); // Tracks the current loop number
   const [isDeleting, setIsDeleting] = useState(false); //Indicates if the text is being deleted or "typed out"
-  const toRotate = ["FullStack Developer", "Computer Scientist", "Data Scientist", "Fisherman"]; // Array of strings to rotate through
+  const toRotate = [
+    "FullStack Developer",
+    "Computer Scientist",
+    "Data Scientist",
+    "Fisherman",
+  ]; // Array of strings to rotate through
   const [text, setText] = useState(""); //Current Text on display
   const [delta, setDelta] = useState(300 - Math.random() * 100); // Time interval for typing effect
   const period = 2000; // Period of time to wait before deleting text
@@ -73,15 +81,26 @@ export const Banner = () => {
                   <p className="banner-rotating-text">
                     {"A "} <span className="wrap">{text}</span>
                   </p>
-                  <p>Bio</p>
-                  <a
-                    href="#connect"
-                    className="navbtn"
-                  >
+                  <p>
+                    Hi I'm Nick, a junior at the University of Southern
+                    California, pursuing a BS degree in Computer Science &
+                    Business Administration. <br /> <br />
+                    With a passion for software development, I aim to apply my
+                    technical and analytical abilities to push boundaries and
+                    solve real-world problems. Outside of tech, you'll find me
+                    fishing, golfing, and weightlifting.
+                  </p>
+                  <a href="#connect" className="navbtn">
                     <span>Let's Connect</span>
                     <ArrowRightCircle size={25} />
                   </a>
-                  
+                  <a
+                    href={Resume}
+                    download="Nicholas Yu's Resume"
+                    target="_blank"
+                  >
+                    <Button>My Resume</Button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>

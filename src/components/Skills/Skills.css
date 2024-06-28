@@ -17,7 +17,7 @@
   text-align: center;
 }
 .skill h2 {
-	font-size: 55px;
+	font-size: 45px;
 	font-weight: 700;
 }
 
@@ -25,7 +25,7 @@
 	font-size: 35px;
 	font-weight: 500;
 	color: #BFB48F;
-	padding-top: 30px;
+	padding-top: 20px;
 }
 
 .skill p {
@@ -58,10 +58,32 @@
 	width: 95%;
 }
 
-img{
+.sphere img{
 	height: auto;
 	width: 95%;
 }
+
+@media (max-width: 768px) {
+	.sphere {
+	  width: 80%; /* Shrink size for smaller screens */
+	  height: auto; /* Shrink size for smaller screens */
+	}
+	.sphere img{
+		height: auto;
+		width: 80%;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.sphere {
+	  width: 60%; /* Further shrink size for very small screens */
+	  height: auto; /* Further shrink size for very small screens */
+	}
+	.sphere img{
+		height: auto;
+		width: 60%;
+	}
+  }
 
 .sphere:after {
 	content: '';

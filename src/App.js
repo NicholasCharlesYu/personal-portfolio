@@ -1,6 +1,6 @@
 import "./App.css";
 import { NavBar } from "./components/NavBar/NavBar";
-import { Banner } from "./components/Banner";
+import { Banner } from "./components/Banner/Banner";
 import { Projects } from "./components/Projects/Projects";
 import { Skills } from "./components/Skills/Skills";
 import "bootstrap/dist/css/bootstrap.min.css";
